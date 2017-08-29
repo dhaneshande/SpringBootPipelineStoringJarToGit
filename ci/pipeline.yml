@@ -2,7 +2,7 @@ resources:
 - name: SpringBootSimpleRest
   type: git
   source:
-    uri: https://github.com/dhaneshande/SpringBootConcoursePipelineWithVersioning.git
+    uri: https://github.com/dhaneshande/SpringBootPipelineStoringJarToGit.git
     branch: master
 - name: hello-world-docker-image
   type: docker-image
