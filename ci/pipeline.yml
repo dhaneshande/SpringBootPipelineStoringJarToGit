@@ -49,4 +49,4 @@ jobs:
     file: SpringBootSimpleRest/ci/tag-files.yml
     params: {save: true}
   - put: resource-gist
-    params: {repository: updated-gist}
+    params: {repository: built-project}
