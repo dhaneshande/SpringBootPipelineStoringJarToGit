@@ -1,0 +1,26 @@
+resources:
+- name: SpringBootSimpleRest
+  type: git
+  source:
+    uri: https://github.com/dhaneshande/SpringBootConcoursePipelineWithVersioning.git
+    branch: master
+- name: hello-world-docker-image
+  type: docker-image
+  source:
+    email: {{docker-hub-email}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
+    repository: {{docker-hub-image-hello-world}}
+
+jobs:
+- name: job-deploy-app
+  serial: true
+  plan:
+  - {get: SpringBootSimpleRest, trigger: true}
+  - task: build
+    file: SpringBootSimpleRest/ci/build.yml
+  - task: build-project
+    file: SpringBootSimpleRest/ci/tag-files.yml
+    params: {save: true}
+  - put: hello-world-docker-image
+    params: {build: built-project}
