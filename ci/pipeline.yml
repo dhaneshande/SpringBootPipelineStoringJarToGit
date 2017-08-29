@@ -42,7 +42,9 @@ jobs:
 - name: job-deploy-app
   serial: true
   plan:
-  - {get: SpringBootSimpleRest, trigger: true}
+  - get: SpringBootSimpleRest
+  - get: resource-gist
+    trigger: true
   - task: build
     file: SpringBootSimpleRest/ci/build.yml
   - task: build-project
