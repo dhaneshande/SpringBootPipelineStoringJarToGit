@@ -44,7 +44,6 @@ jobs:
   plan:
   - get: SpringBootSimpleRest
   - get: resource-gist
-    trigger: true
   - task: build
     file: SpringBootSimpleRest/ci/build.yml
   - task: build-project
