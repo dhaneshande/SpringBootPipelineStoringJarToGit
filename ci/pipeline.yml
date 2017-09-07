@@ -48,5 +48,5 @@ jobs:
   - task: build-project
     file: SpringBootSimpleRest/ci/tag-files.yml
     params: {save: true}
-  - put: resource-gist
-    params: {repository: built-project}
+  #- put: resource-gist
+   # params: {repository: built-project}
