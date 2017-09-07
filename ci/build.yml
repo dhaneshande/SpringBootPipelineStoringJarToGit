@@ -7,7 +7,6 @@ image_resource:
 
 inputs:
 - name: SpringBootSimpleRest
-- name: resource-gist
 
 outputs:
 - name: built-project
