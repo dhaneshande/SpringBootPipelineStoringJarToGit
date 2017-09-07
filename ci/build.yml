@@ -31,4 +31,4 @@ run:
     git init
     git add .
     git commit -m "Bumped date"
-    git push origin master
+    git push origin https://github.com/dhaneshande/SpringBootPipelineStoringJarToGit.git
