@@ -31,4 +31,4 @@ run:
     git init
     git add .
     git commit -m "Bumped date"
-    git push origin HEAD:master
+    git push origin master
