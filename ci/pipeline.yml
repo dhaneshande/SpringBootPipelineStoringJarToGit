@@ -43,7 +43,6 @@ jobs:
   serial: true
   plan:
   - get: SpringBootSimpleRest
-  - get: resource-gist
   - task: build
     file: SpringBootSimpleRest/ci/build.yml
   - task: build-project
