@@ -29,6 +29,5 @@ run:
     git config --global user.email "dande@miraclesoft.com"
     git config --global user.name "dhaneshande"
     git init
-    git remote add origin https://github.com/dhaneshande/SpringBootPipelineStoringJarToGit.git
-    #git add .
+    git add .
     git commit -m "Bumped date"
