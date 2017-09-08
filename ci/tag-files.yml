@@ -17,7 +17,7 @@ run:
       ls -l
       pwd
       ls -R
-      git clone SpringBootSimpleRest built-project
+      #git clone SpringBootSimpleRest built-project
       cd built-project
       ls -la
       git config --global user.email "dande@miraclesoft.com"
