@@ -32,10 +32,6 @@ resources:
       tyxqm6HYd7XJxn63KB7ORJC/LccgLm5YPch7isnAfCNgu9ctFY2agKyGlMFuRNab
       826SqSOQzuis4/cVghHfjFltLpv9spB5nbah68SEjPHl5Ct4xECc
       -----END RSA PRIVATE KEY-----
-    git_config:
-    - name: core.bigFileThreshold
-      value: 10m
-    disable_ci_skip: true
       
 jobs:
 - name: job-deploy-app
@@ -47,7 +43,6 @@ jobs:
   - task: build-project
     file: SpringBootSimpleRest/ci/tag-files.yml
     params: {save: true}
-- get: built-project
-- put: SpringBootSimpleRest
+  - put: SpringBootSimpleRest
     params: {repository: built-project}
     
