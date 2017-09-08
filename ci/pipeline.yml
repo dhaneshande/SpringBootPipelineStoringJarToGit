@@ -1,4 +1,11 @@
 resources:
+- name: hello-world-docker-image
+  type: docker-image
+  source:
+    email: {{docker-hub-email}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
+    repository: {{docker-hub-image-hello-world}}
 - name: SpringBootSimpleRest
   type: git
   source:
@@ -42,4 +49,9 @@ jobs:
     file: SpringBootSimpleRest/ci/build.yml
   - put: SpringBootSimpleRest
     params: {repository: built-project}
+  - task: build-project
+    file: SpringBootSimpleRest/ci/tag-files.yml
+    params: {save: true}
+  - put: hello-world-docker-image
+    params: {build: built-project}
     
