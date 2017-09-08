@@ -10,13 +10,19 @@ inputs:
 - name: built-project
 
 run:
-  path: bash
+  path: sh
   args:
-    - -e
-    - -c
+    - -exc
     - |
       ls -l
       pwd
       ls -R
-      cd SpringBootSimpleRest
+      git clone SpringBootSimpleRest built-project
+      cd built-project
       ls -la
+      git config --global user.email "dande@miraclesoft.com"
+      git config --global user.name "dhaneshande"
+      #git init
+      git add .
+      git commit -m "Bumped date"
+      #git push origin https://github.com/dhaneshande/SpringBootPipelineStoringJarToGit.git
