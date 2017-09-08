@@ -30,7 +30,7 @@ run:
     #git init
     git add .
     git commit -m "Bumped date"
-    #git push origin https://github.com/dhaneshande/SpringBootPipelineStoringJarToGit.git
+    git push origin master
     #cp ./target/springbootsimplerest-0.0.1-SNAPSHOT.jar ../built-project/demo.jar
     #cp Dockerfile ../built-project
     #ls -la
