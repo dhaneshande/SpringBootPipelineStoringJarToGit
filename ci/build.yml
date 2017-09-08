@@ -26,6 +26,7 @@ run:
     cp ./target/springbootsimplerest-0.0.1-SNAPSHOT.jar ../built-project/demo.jar
     cp Dockerfile ../built-project
     ls -la
+    cd ..
     git clone SpringBootSimpleRest built-project
     cd built-project
     ls -la
