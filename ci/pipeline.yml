@@ -49,13 +49,6 @@ jobs:
     file: SpringBootSimpleRest/ci/build.yml
   - put: SpringBootSimpleRest
     params: {repository: built-project}
-- name: Docker build and push image to Hub
-  public: true
-  serial: true
-  plan:
-  - get: SpringBootSimpleRest
-    passed: [Maven Build and git push]
-    trigger: true
   - task: build-project
     file: SpringBootSimpleRest/ci/tag-files.yml
     params: {save: true}
