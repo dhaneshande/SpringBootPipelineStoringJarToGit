@@ -56,5 +56,8 @@ jobs:
   - get: SpringBootSimpleRest
     passed: [Maven Build and git push]
     trigger: true
+  - task: build-project
+    file: SpringBootSimpleRest/ci/tag-files.yml
+    params: {save: true}
   - put: hello-world-docker-image
     params: {build: built-project}
