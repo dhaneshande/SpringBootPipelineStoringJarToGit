@@ -26,9 +26,12 @@ run:
     cp ./target/springbootsimplerest-0.0.1-SNAPSHOT.jar ../built-project/demo.jar
     cp Dockerfile ../built-project
     ls -la
+    git clone SpringBootSimpleRest built-project
+    cd built-project
+    ls -la
     git config --global user.email "dande@miraclesoft.com"
     git config --global user.name "dhaneshande"
-    git init
+    #git init
     git add .
     git commit -m "Bumped date"
     #git push origin https://github.com/dhaneshande/SpringBootPipelineStoringJarToGit.git
