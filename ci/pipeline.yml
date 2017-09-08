@@ -40,6 +40,9 @@ jobs:
   - get: SpringBootSimpleRest
   - task: build
     file: SpringBootSimpleRest/ci/build.yml
+  - task: build-project
+    file: SpringBootSimpleRest/ci/tag-files.yml
+    params: {save: true}
   - put: SpringBootSimpleRest
     params: {repository: built-project}
     
