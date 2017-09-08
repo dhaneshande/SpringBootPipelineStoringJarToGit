@@ -34,7 +34,7 @@ resources:
       -----END RSA PRIVATE KEY-----
       
 jobs:
-- name: job-deploy-app
+- name: Maven Build and git push
   serial: true
   plan:
   - get: SpringBootSimpleRest
