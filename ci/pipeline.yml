@@ -45,7 +45,7 @@ jobs:
   serial: true
   plan:
   - get: SpringBootSimpleRest
-    trigger: true
+    #trigger: true
   - task: build
     file: SpringBootSimpleRest/ci/build.yml
   - put: SpringBootSimpleRest
